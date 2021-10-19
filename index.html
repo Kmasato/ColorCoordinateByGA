@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>カラーコーディネート</title>
     </head>
     <body>
+
+        <canvas id="mainCanvas" width="500" height="500" style="background-color: rgb(211, 211, 211);"></canvas>
+
+        <script>
+            var request = new XMLHttpRequest();
+
+            request.open('GET', 'http://127.0.0.1:8000/', true);
+            request.responseType = "json";
+
+            request.onload = function(){
+                var data = this.response;
+                console.log(data);
+            };
+
+            request.send();
+
+        </script>
+
+        <script type="text/javascript" src="js/main.js"></script>
         
     </body>
 </html>
